@@ -19,14 +19,15 @@ prompt spaceship
 fpath=($fpath "/home/dustinhsiang/.zfunctions")
 
 # Welcome Screen.
-#curl -s "https://sv443.net/jokeapi/v2/joke/Programming?blacklistFlags=religious,racist,sexist&type=single" |\
-# jq --raw-output '.joke' | cowsay -f elephant
-cowsay -f elephant Welcome, Dustin Hsiang!
+curl -s "https://sv443.net/jokeapi/v2/joke/Programming?blacklistFlags=religious,racist,sexist&type=single" |\
+ jq --raw-output '.joke' | cowsay -f elephant
+#cowsay -f elephant Welcome, Dustin Hsiang!
 
 # Alias
-alias ls="ls -G"
-alias tunnelvm="ssh dustin-vm -L 2222:localhost:22 'echo Tunnel ready! Press Ctrl + C to end.; cat'"
+alias ls="ls -N --color"
+alias remotevm="ssh dustin-vm -L 2222:localhost:22 'echo Tunnel ready! Press Ctrl + C to end.; cat'"
 alias zshconfig='vim ~/.zshrc'
+alias vimconfig='vim ~/.vimrc'
 alias tmuxconfig='vim ~/.tmux.conf'
 alias tmuxreload='tmux source-file ~/.tmux.conf'
 alias reload='source ~/.zshrc'
