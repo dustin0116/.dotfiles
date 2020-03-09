@@ -1,10 +1,16 @@
-#TMUX
+# TMUX
 if [ "$TMUX" = "" ]; then tmux; fi
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH=/usr/local/bin:$PATH
 
-# Tab menu.
+# History
+HISTSIZE=5000               #How many lines of history to keep in memory
+HISTFILE=~/.zsh_history     #Where to save history to disk
+SAVEHIST=5000               #Number of history entries to save to disk
+setopt appendhistory     #Append history to the history file (no overwriting)
+
+# Tab menu
 #autoload -Uz compinit
 #compinit
 #zstyle ':completion:*' menu select
@@ -13,15 +19,16 @@ autoload -Uz compinit
 compinit
 zstyle ':completion:*' menu yes select
 
-# ZSH THEME.
+# ZSH Theme
 autoload -U promptinit; promptinit
 prompt spaceship
 fpath=($fpath "/home/dustinhsiang/.zfunctions")
 
-# Welcome Screen.
-curl -s "https://sv443.net/jokeapi/v2/joke/Programming?blacklistFlags=religious,racist,sexist&type=single" |\
- jq --raw-output '.joke' | cowsay -f elephant
+# Welcome Screen
+#curl -s "https://sv443.net/jokeapi/v2/joke/Programming?blacklistFlags=religious,racist,sexist&type=single" |\
+#	jq --raw-output '.joke' | cowsay -f elephant
 #cowsay -f elephant Welcome, Dustin Hsiang!
+neofetch
 
 # Alias
 alias ls="ls -N --color"
