@@ -49,7 +49,7 @@ ZSH_HIGHLIGHT_STYLES[path_prefix]=none
 
 # ZSH Autosuggestion
 source /home/linuxbrew/.linuxbrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=0"
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=0,bold"
 
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
