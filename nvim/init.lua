@@ -15,7 +15,6 @@ require("config.options")
 -- Set the background color for the current line
 -- vim.cmd('highlight CursorLine cterm=NONE ctermbg=238 guibg=#3E4451')
 require("lazy").setup("plugins")
-
 local opts = {
 	rtp = {
 		disabled_plugins = {
