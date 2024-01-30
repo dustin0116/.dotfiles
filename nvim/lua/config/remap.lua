@@ -13,6 +13,7 @@ map('n', '<leader>ff', '<Cmd>Telescope find_files<CR>', opts)
 map('n', '<leader>fg', '<Cmd>Telescope live_grep<CR>', opts)
 map('n', '<leader>fb', '<Cmd>Telescope buffers<CR>', opts)
 map('n', '<leader>fh', '<Cmd>Telescope help_tags<CR>', opts)
+
 -- Barbar.nvim
 -- Move to previous/next
 map('n', '<leader>,', '<Cmd>BufferPrevious<CR>', opts)
