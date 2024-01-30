@@ -17,6 +17,10 @@ bindkey '\e[Z' reverse-menu-complete
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
 
+# Syntax Highlighting
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# Completion
 autoload -Uz compinit
 compinit
 zstyle ':completion:*' menu select
