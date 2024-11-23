@@ -1,7 +1,7 @@
 vim.g.mapleader = " " -- Make sure to set `mapleader` before lazy so your mappings are correct
 
-local map = vim.api.nvim_set_keymap
-local opts = { noremap = true, silent = true }
+local map = vim.keymap.set
+local opts = { silent = true }
 
 -- nvim-tree
 map('n', '<leader>t', ':NvimTreeToggle<cr>', opts)
@@ -9,12 +9,14 @@ map('n', '<leader>h', ':NvimTreeFocus<cr>',opts)
 
 -- Telescope
 map('n', '<leader>u', '<Cmd>Telescope undo<CR>', opts)
+map('n', '<leader>f', '', { desc = 'Telescope', silent = true })
 map('n', '<leader>ff', '<Cmd>Telescope find_files<CR>', opts)
 map('n', '<leader>fg', '<Cmd>Telescope live_grep<CR>', opts)
 map('n', '<leader>fb', '<Cmd>Telescope buffers<CR>', opts)
 map('n', '<leader>fh', '<Cmd>Telescope help_tags<CR>', opts)
 
 -- Barbar.nvim
+map('n', '<leader>b', '', { desc = 'Buffer', silent = true })
 -- Move to previous/next
 map('n', '<leader>,', '<Cmd>BufferPrevious<CR>', opts)
 map('n', '<leader>.', '<Cmd>BufferNext<CR>', opts)
@@ -22,16 +24,16 @@ map('n', '<leader>.', '<Cmd>BufferNext<CR>', opts)
 map('n', '<leader><', '<Cmd>BufferMovePrevious<CR>', opts)
 map('n', '<leader>>', '<Cmd>BufferMoveNext<CR>', opts)
 -- Goto buffer in position...
-map('n', '<leader>1', '<Cmd>BufferGoto 1<CR>', opts)
-map('n', '<leader>2', '<Cmd>BufferGoto 2<CR>', opts)
-map('n', '<leader>3', '<Cmd>BufferGoto 3<CR>', opts)
-map('n', '<leader>4', '<Cmd>BufferGoto 4<CR>', opts)
-map('n', '<leader>5', '<Cmd>BufferGoto 5<CR>', opts)
-map('n', '<leader>6', '<Cmd>BufferGoto 6<CR>', opts)
-map('n', '<leader>7', '<Cmd>BufferGoto 7<CR>', opts)
-map('n', '<leader>8', '<Cmd>BufferGoto 8<CR>', opts)
-map('n', '<leader>9', '<Cmd>BufferGoto 9<CR>', opts)
-map('n', '<leader>0', '<Cmd>BufferLast<CR>', opts)
+map('n', '<leader>b1', '<Cmd>BufferGoto 1<CR>', opts)
+map('n', '<leader>b2', '<Cmd>BufferGoto 2<CR>', opts)
+map('n', '<leader>b3', '<Cmd>BufferGoto 3<CR>', opts)
+map('n', '<leader>b4', '<Cmd>BufferGoto 4<CR>', opts)
+map('n', '<leader>b5', '<Cmd>BufferGoto 5<CR>', opts)
+map('n', '<leader>b6', '<Cmd>BufferGoto 6<CR>', opts)
+map('n', '<leader>b7', '<Cmd>BufferGoto 7<CR>', opts)
+map('n', '<leader>b8', '<Cmd>BufferGoto 8<CR>', opts)
+map('n', '<leader>b9', '<Cmd>BufferGoto 9<CR>', opts)
+map('n', '<leader>b0', '<Cmd>BufferLast<CR>', opts)
 -- Pin/unpin buffer
 map('n', '<leader>p', '<Cmd>BufferPin<CR>', opts)
 -- Close buffer
