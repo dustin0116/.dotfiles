@@ -1,5 +1,7 @@
 source $HOME/.aliases
 export PATH=/opt/homebrew/bin:$PATH
+export EDITOR=nvim
+export VISUAL="$EDITOR"
 
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
