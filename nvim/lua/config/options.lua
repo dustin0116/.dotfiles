@@ -20,6 +20,10 @@ vim.o.mouse = "a"
 -- Set the background color for the current line
 opt.fillchars = { eob = " " }
 
+-- Reserve a space in the gutter
+-- This will avoid an annoying layout shift in the screen
+opt.signcolumn = "yes"
+
 -- Diagonistic Configuration
 vim.diagnostic.config({
 	signs = {
