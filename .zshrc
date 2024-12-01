@@ -1,4 +1,5 @@
 source $HOME/.aliases
+export PATH=/opt/homebrew/bin:$PATH
 
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
@@ -7,18 +8,12 @@ SAVEHIST=1000
 bindkey -e
 # End of lines configured by zsh-newuser-install
 
-# The following lines were added by compinstall
-zstyle :compinstall filename '/home/dustinhsiang/.zshrc'
-
 # Keybinds
 bindkey  "^[[H"   beginning-of-line
 bindkey  "^[[F"   end-of-line
 bindkey '\e[Z' reverse-menu-complete
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
-
-# Syntax Highlighting
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Completion
 autoload -Uz compinit
@@ -31,7 +26,16 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Themes
-# eval "$(starship init zsh)"
-fpath+=($HOME/.zsh/pure)
+fpath+=("$(brew --prefix)/share/zsh/site-functions")
 autoload -U promptinit; promptinit
+source $HOME/.dotfiles/.pure.zsh
 prompt pure
+
+# Syntax Highlighting
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# Autosuggestions
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# Set up fzf key bindings and fuzzy completion
+source <(fzf --zsh)
+export FZF_DEFAULT_OPTS_FILE=$HOME/.dotfiles/fzf/.fzfrc

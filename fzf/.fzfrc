@@ -1,0 +1,6 @@
+# Open in tmux popup if on tmux, otherwise use --height mode
+--height 40%
+--tmux bottom,40%
+--layout reverse
+--border top
+--preview="bat --style=numbers --color=always {} || head -n 100 {}"
