@@ -1,4 +1,5 @@
 local opt = vim.opt
+local diagnostic = vim.diagnostic
 
 -- Tab/Indentation
 opt.tabstop = 4
@@ -25,13 +26,13 @@ opt.fillchars = { eob = " " }
 opt.signcolumn = "yes"
 
 -- Diagonistic Configuration
-vim.diagnostic.config({
+diagnostic.config({
 	signs = {
 		text = {
-			[vim.diagnostic.severity.ERROR] = "✘",
-			[vim.diagnostic.severity.WARN] = "▲",
-			[vim.diagnostic.severity.HINT] = "⚑",
-			[vim.diagnostic.severity.INFO] = "»",
+			[diagnostic.severity.ERROR] = "✘",
+			[diagnostic.severity.WARN] = "▲",
+			[diagnostic.severity.HINT] = "⚑",
+			[diagnostic.severity.INFO] = "»",
 		},
 	},
 })
