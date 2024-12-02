@@ -6,6 +6,7 @@ return {
 
 		configs.setup({
 			ensure_installed = {
+				"comment",
 				"c",
 				"lua",
 				"vim",
@@ -14,6 +15,7 @@ return {
 				"elixir",
 				"heex",
 				"javascript",
+				"typescript",
 				"html",
 				"python",
 			},
