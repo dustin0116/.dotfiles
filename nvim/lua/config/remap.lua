@@ -25,7 +25,7 @@ map("n", "<leader>gP", "<Cmd>Git pull --rebase<CR>", opts)
 map("n", "<leader>gb", "<Cmd>Git blame<CR>", opts)
 
 -- Undotree
-map("n", "<leader>u", "<Cmd>UndotreeToggle<CR>", opts)
+map("n", "<leader>u", "<Cmd>UndotreeToggle<CR><Cmd>UndotreeFocus<CR>", { desc = "Undotree", silent = true })
 
 -- Barbar.nvim
 map("n", "<leader>b", "", { desc = "Buffer", silent = true })

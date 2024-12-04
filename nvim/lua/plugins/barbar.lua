@@ -12,5 +12,6 @@ return {
 		-- animation = true,
 		-- insert_at_start = true,
 		-- …etc.
+		focus_on_close = "left",
 	},
 }
