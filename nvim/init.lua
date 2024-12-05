@@ -40,12 +40,3 @@ autocmd("LspAttach", {
 		vim.keymap.set("n", "<F4>", "<cmd>lua vim.lsp.buf.code_action()<cr>", opts)
 	end,
 })
-
-local opts = {
-	rtp = {
-		disabled_plugins = {
-			"netrw",
-			"netrwPlugin",
-		},
-	},
-}

@@ -29,10 +29,10 @@ opt.signcolumn = "yes"
 diagnostic.config({
 	signs = {
 		text = {
-			[diagnostic.severity.ERROR] = "✘",
-			[diagnostic.severity.WARN] = "▲",
-			[diagnostic.severity.HINT] = "⚑",
-			[diagnostic.severity.INFO] = "»",
+			[diagnostic.severity.ERROR] = "󰅙",
+			[diagnostic.severity.WARN] = "",
+			[diagnostic.severity.HINT] = "󰌵",
+			[diagnostic.severity.INFO] = "󰋼",
 		},
 	},
 })
